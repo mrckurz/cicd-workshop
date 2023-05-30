@@ -31,3 +31,4 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 * git config --global alias.gl 'log --oneline --graph --all'
 
 
+
