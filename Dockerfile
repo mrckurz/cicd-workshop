@@ -1,4 +1,4 @@
-FROM golang:1.19
+FROM golang:1.24
 
 # Set maintainer label: maintainer=[YOUR-EMAIL]
 MAINTAINER Marc Kurz <marc.kurz@fh-ooe.at>
