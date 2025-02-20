@@ -16,6 +16,7 @@ func getMinute(minute int, second int) int {
 	return minute + second/30
 }
 
+// http://localhost:8888
 func main() {
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(":8888", nil))
