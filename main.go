@@ -8,8 +8,13 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	// Set the content type to HTML
+	w.Header().Set("Content-Type", "text/html")
+
 	t := time.Now()
-	fmt.Fprintf(w, "Hello, it is %d:%d", t.Hour(), getMinute(t.Minute(), t.Second()))
+	today := t.Format("2006-01-02") // YYYY-MM-DD format
+	fmt.Fprintf(w, "Hello, it is %d:%d<br />", t.Hour(), getMinute(t.Minute(), t.Second()))
+	fmt.Fprintf(w, "Today is: <b>%s</b>", today)
 }
 
 func getMinute(minute int, second int) int {
