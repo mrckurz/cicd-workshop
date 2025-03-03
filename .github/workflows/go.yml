@@ -38,8 +38,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=DEIN_PROJECT_KEY
-            -Dsonar.organization=DEINE_ORGANISATION
+            -Dsonar.projectKey=mrckurz_cicd-workshop
+            -Dsonar.organization=mrckurz
+            -Dsonar.branch.name=main
 
   Vulnerability_Scan:
     runs-on: ubuntu-latest
