@@ -23,7 +23,6 @@ func getMinute(minute int, second int) int {
 	return minute + second/30 // Magic number 30 könnte als Issue erkannt werden
 }
 
-// http://localhost:8888
 func main() {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(serverPort, nil) // Ignored error handling
