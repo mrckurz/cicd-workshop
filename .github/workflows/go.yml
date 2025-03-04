@@ -8,12 +8,12 @@ on:
 
 jobs:
 
-  Build_and_Test:
-    runs-on: ubuntu-latest
+  Build_and_Test: # Name des Jobs
+    runs-on: ubuntu-latest #Job läuft in einer virtuellen Maschine mit dem neuesten Ubuntu-Betriebssystem
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3 #offizielle GitHub Action, um den Code aus dem Repository in die virtuelle Maschine zu klonen
 
-      - name: Set up Go
+      - name: Set up Go #verwendet die GitHub Action actions/setup-go@v3, um Go in der gewünschten Version (1.19) zu installieren
         uses: actions/setup-go@v3
         with:
           go-version: 1.19
@@ -37,7 +37,7 @@ jobs:
 
 
 
-        
+
   #Sonar_Analysis:
   #  runs-on: ubuntu-latest
   #  needs: Build_and_Test
