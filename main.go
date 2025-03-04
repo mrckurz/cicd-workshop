@@ -1,13 +1,13 @@
 package main
 
 import (
-	_ "errors" // Unused import, wird von SonarCloud als Problem erkannt
-	"fmt"      // Unused import (wenn wir es nicht im Code nutzen)
+	_ "errors"
+	"fmt"
 	"net/http"
 	"time"
 )
 
-const serverPort = ":8888" // Hardcoded port - könnte als Problem erkannt werden
+const serverPort = ":8888" // Hardcoded port
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	// Set the content type to HTML
@@ -20,10 +20,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getMinute(minute int, second int) int {
-	return minute + second/30 // Magic number 30 könnte als Issue erkannt werden
+	return minute + second/30
 }
 
 func main() {
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(serverPort, nil) // Ignored error handling
+	http.ListenAndServe(serverPort, nil)
 }
