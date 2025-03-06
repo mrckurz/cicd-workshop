@@ -9,6 +9,7 @@ import (
 
 const serverPort = ":8888" // Hardcoded port
 
+// Handler for HTTP Requests
 func handler(w http.ResponseWriter, r *http.Request) {
 	// Set the content type to HTML
 	w.Header().Set("Content-Type", "text/html")
