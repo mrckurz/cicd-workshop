@@ -14,12 +14,12 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 * go test -v
 
 ### Docker
-* docker image build -f Dockerfile -t mrckurz/cicd-workshop-test-image:latest ./ 
+* docker image build -f Dockerfile -t mrckurz/cicd-workshop-image:latest ./ 
 * docker images
-* docker container run -p 9090:8888 mrckurz/cicd-workshop-test-image:latest
+* docker container run -p 9090:8888 mrckurz/cicd-workshop-image:latest
 * docker ps
 * docker stop [containerId]
-* docker image pull mrckurz/cicd-workshop-test-image:[latest|sha]
+* docker image pull mrckurz/cicd-workshop-image:[latest|sha]
 
 ### Trivy
 * trivy image [YOUR_IMAGE_NAME]
@@ -29,3 +29,11 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 * git config --global alias.s status
 * git config --global alias.glog "log --pretty=oneline --graph -5 --decorate --abbrev-commit"
 * git config --global alias.gl 'log --oneline --graph --all'
+
+### Minikube
+* minikube start
+* minikube dashboard
+* kubectl run demo --image=mrckurz/cicd-workshop-image:latest --port=5000 --labels=app=demo
+* kubectl get pods --selector app=demo
+* kubectl port-forward demo 9999:5000
+* kubectl delete pod demo
