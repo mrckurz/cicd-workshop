@@ -77,7 +77,7 @@ Docker_Build_and_Publish:
           push: true
           tags: ${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:latest,${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:${{ steps.vars.outputs.sha_short }}
 
-
+          
 
   Vulnerability_Scan:
     runs-on: ubuntu-latest
