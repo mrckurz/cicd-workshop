@@ -57,31 +57,9 @@ jobs:
             -Dsonar.branch.name=main
 
 
-Docker_Build_and_Publish:
-    runs-on: ubuntu-latest
-    needs: Sonar_Analysis 
-    steps:
-      - uses: actions/checkout@v3
-      - id: vars
-        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-      - name: Docker Login 
-        uses: docker/login-action@v2.1.0
-        with: 
-          username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-
-      - name: Build Docker Image
-        uses: docker/build-push-action@v4.0.0
-        with:
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:latest,${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:${{ steps.vars.outputs.sha_short }}
-
-          
-
   Vulnerability_Scan:
     runs-on: ubuntu-latest
-    needs: Docker_Build_and_Publish
+    needs: Build_and_Test
     steps:
       - uses: actions/checkout@v3
       - id: vars
@@ -103,4 +81,22 @@ Docker_Build_and_Publish:
           severity: 'CRITICAL,HIGH'
 
 
-  
+  Docker_Build_and_Publish:
+    runs-on: ubuntu-latest
+    needs: [Sonar_Analysis, Vulnerability_Scan]  # Warten auf beide Jobs
+    steps:
+      - uses: actions/checkout@v3
+      - id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Docker Login 
+        uses: docker/login-action@v2.1.0
+        with: 
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build Docker Image
+        uses: docker/build-push-action@v4.0.0
+        with:
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:latest,${{ secrets.DOCKERHUB_USER }}/cicd-workshop-image:${{ steps.vars.outputs.sha_short }}
