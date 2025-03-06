@@ -16,7 +16,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	t := time.Now()
 	today := t.Format("2006-01-02") // YYYY-MM-DD format
-	fmt.Fprintf(w, "Hello, it is "+fmt.Sprint(t.Hour())+":"+fmt.Sprint(getMinute(t.Minute(), t.Second()))+"<br />")
+	timeString := fmt.Sprintf("%02d:%02d", t.Hour(), getMinute(t.Minute(), t.Second()))
+	
+	fmt.Fprintf(w, "Hello, it is %s<br />", timeString)
 	fmt.Fprintf(w, "Today is: <b>%s</b>", today)
 }
 
