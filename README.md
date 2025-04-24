@@ -24,7 +24,7 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 - **Docker Desktop**: [Download](https://www.docker.com/products/docker-desktop/)
 - **Minikube**: [Installation Guide](https://minikube.sigs.k8s.io/docs/start/)
 - **kubectl**: [Installation Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub-hosted Runner (automatic)**: [Installation Guide](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
 
 ### macOS
 
@@ -33,7 +33,7 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 - **Docker Desktop**: [Download](https://www.docker.com/products/docker-desktop/)
 - **Minikube**: `brew install minikube`
 - **kubectl**: `brew install kubectl`
-- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub-hosted Runner (automatic)**: [Installation Guide](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
 
 ### Linux
 
@@ -41,7 +41,7 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 - **Docker**: [Installation Guide](https://docs.docker.com/engine/install/)
 - **Minikube**: [Installation Guide](https://minikube.sigs.k8s.io/docs/start/)
 - **kubectl**: [Installation Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub-hosted Runner (automatic)**: [Installation Guide](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
 
 ---
 
