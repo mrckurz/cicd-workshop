@@ -163,6 +163,5 @@ cicd-workshop/
 
 ## 🏷️ GitHub Badges
 
-![Build](https://img.shields.io/github/actions/workflow/status/mrckurz/cicd-workshop/ci.yml?branch=main)
+![Build](https://img.shields.io/github/actions/workflow/status/mrckurz/cicd-workshop/go.yml?branch=main)
 ![Docker Pulls](https://img.shields.io/docker/pulls/mrckurz/cicd-workshop-image)
-![License](https://img.shields.io/github/license/mrckurz/cicd-workshop)
