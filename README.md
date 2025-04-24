@@ -47,7 +47,7 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 
 ## 🧪 CI/CD Pipeline Explained
 
-The `.github/workflows/ci.yml` defines the following stages:
+The `.github/workflows/go.yml` defines the following stages:
 
 ### 1. **Build**
 
