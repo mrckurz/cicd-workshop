@@ -1,12 +1,12 @@
 
-# CI/CD Workshop: GitLab + Docker + Minikube
+# CI/CD Workshop: GitHub + Docker + Minikube
 
-This project demonstrates a complete CI/CD pipeline using GitLab CI/CD, Docker, and Minikube. It automates building, testing, scanning, and deploying a containerized application.
+This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker, and Minikube. It automates building, testing, scanning, and deploying a containerized application.
 
 ## 🚀 Project Overview
 
-- **Repository**: [gitlab.com/kurzmarc/cicd-workshop](https://gitlab.com/kurzmarc/cicd-workshop)
-- **Technologies**: GitLab CI/CD, Docker, Trivy, SonarCloud, Minikube
+- **Repository**: [github.com/mrckurz/cicd-workshop](https://github.com/mrckurz/cicd-workshop)
+- **Technologies**: GitHub Actions, Docker, Trivy, SonarCloud, Minikube
 - **Pipeline Stages**:
   - Build Docker image
   - Push image to Docker Hub
@@ -24,7 +24,7 @@ This project demonstrates a complete CI/CD pipeline using GitLab CI/CD, Docker, 
 - **Docker Desktop**: [Download](https://www.docker.com/products/docker-desktop/)
 - **Minikube**: [Installation Guide](https://minikube.sigs.k8s.io/docs/start/)
 - **kubectl**: [Installation Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- **GitLab Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
 
 ### macOS
 
@@ -33,7 +33,7 @@ This project demonstrates a complete CI/CD pipeline using GitLab CI/CD, Docker, 
 - **Docker Desktop**: [Download](https://www.docker.com/products/docker-desktop/)
 - **Minikube**: `brew install minikube`
 - **kubectl**: `brew install kubectl`
-- **GitLab Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
 
 ### Linux
 
@@ -41,13 +41,13 @@ This project demonstrates a complete CI/CD pipeline using GitLab CI/CD, Docker, 
 - **Docker**: [Installation Guide](https://docs.docker.com/engine/install/)
 - **Minikube**: [Installation Guide](https://minikube.sigs.k8s.io/docs/start/)
 - **kubectl**: [Installation Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- **GitLab Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
+- **GitHub Runner (optional)**: [Installation Guide](https://docs.gitlab.com/runner/install/)
 
 ---
 
 ## 🧪 CI/CD Pipeline Explained
 
-The `.gitlab-ci.yml` defines the following stages:
+The `.github/workflows/ci.yml` defines the following stages:
 
 ### 1. **Build**
 
@@ -149,14 +149,13 @@ minikube service cicd-workshop
 
 ```
 cicd-workshop/
-├── .gitlab-ci.yml
+├── .github/workflows/ci.yml
 ├── Dockerfile
 ├── README.md
 ├── redeploy.sh
 ├── minikube-deployment.yaml
 ├── go.mod
-├── main_test.go
+├── go.sum
 └── main.go
 ```
-
 
