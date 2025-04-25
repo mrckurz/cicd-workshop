@@ -32,7 +32,7 @@ These branches represent intermediate steps of the CI/CD pipeline implementation
 #### Step 1: `step-1-base-setup`
 
 - **Description**: This branch sets up the initial pipeline structure with a simple `echo` command to verify pipeline execution.
-- **Focus**: Introducing the `.github/workflows/ci.yml` file and understanding basic pipeline operations.
+- **Focus**: Introducing the `.github/workflows/go.yml` file and understanding basic pipeline operations.
 - **Use Case**: When starting with CI/CD basics and setting up the first workflow.
 
 #### Step 2: `step-2-docker-build`
