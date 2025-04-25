@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - "main"
-      - "step-3-vulnerabiliy-scan"
+      - "step-3-vulnerability-scan"
   pull_request:
     branches: [ "main" ]
 
