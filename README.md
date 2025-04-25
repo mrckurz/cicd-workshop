@@ -16,6 +16,53 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 
 ---
 
+## 🌿 Branches
+
+This repository follows a structured branching model to progressively build the CI/CD pipeline step by step. Each branch represents a different step in the pipeline implementation.
+
+### Main Branch (`main`)
+
+- **Description**: This is the primary branch where the **complete solution** resides. All final code and configurations for the CI/CD pipeline, Docker setup, security scanning, and deployment are merged into this branch.
+- **Usage**: The `main` branch contains the finished version of the pipeline that runs on GitHub Actions, including all the stages like build, push, vulnerability scan, code analysis, and deployment to Minikube.
+
+### Step-by-Step Branches
+
+These branches represent intermediate steps of the CI/CD pipeline implementation and allow for incremental learning.
+
+#### Step 1: `step-1-base-setup`
+
+- **Description**: This branch sets up the initial pipeline structure with a simple `echo` command to verify pipeline execution.
+- **Focus**: Introducing the `.github/workflows/ci.yml` file and understanding basic pipeline operations.
+- **Use Case**: When starting with CI/CD basics and setting up the first workflow.
+
+#### Step 2: `step-2-docker-build`
+
+- **Description**: This branch adds a job to build a Docker image for the project.
+- **Focus**: Adding Docker build commands and understanding how to package applications into containers.
+- **Use Case**: Building the Docker image and pushing it to Docker Hub.
+
+#### Step 3: `step-3-vulnerability-scan`
+
+- **Description**: This branch adds the Trivy vulnerability scan to ensure security checks for the Docker image.
+- **Focus**: Integrating Trivy into the pipeline to scan for known vulnerabilities in the image.
+- **Use Case**: Enhancing security by scanning images for vulnerabilities before deployment.
+
+#### Step 4: `step-4-sonarcloud`
+
+- **Description**: This branch adds the SonarCloud integration for code quality analysis.
+- **Focus**: Configuring SonarCloud to analyze the source code for quality issues and maintainability.
+- **Use Case**: Adding code quality checks to the pipeline to ensure the health of the codebase.
+
+#### Step 5: `step-5-deploy-minikube`
+
+- **Description**: This branch adds the deployment step to Minikube, enabling automatic deployment of the built image to a local Kubernetes cluster.
+- **Focus**: Deploying Docker containers to a Kubernetes cluster using Minikube.
+- **Use Case**: Testing and deploying the application in a Kubernetes environment locally.
+
+Each step allows incremental learning and builds on top of the previous one. These branches give a clear progression for setting up a complete CI/CD pipeline.
+
+---
+
 ## 🧰 Prerequisites
 
 ### Windows
