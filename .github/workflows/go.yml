@@ -2,7 +2,9 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      -  "main"
+      - "step-4-sonarcloud"
   pull_request:
     branches: [ "main" ]
 
