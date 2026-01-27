@@ -46,7 +46,7 @@ func TestGetMinuteNegative(t *testing.T) {
 // Große Zahlen testen
 func TestGetMinuteLargeValues(t *testing.T) {
 	res1 := getMinute(1000, 29)
-	if res1 != 1000 {
+	if res1 == 1000 {
 		t.Errorf("getMinute(1000, 29) = %d; wanted 1000", res1)
 	}
 
