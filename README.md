@@ -3,6 +3,7 @@
 
 This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker, and Minikube. It automates building, testing, scanning, and deploying a containerized application.
 
+
 ## 🚀 Project Overview
 
 - **Repository**: [github.com/mrckurz/cicd-workshop](https://github.com/mrckurz/cicd-workshop)
