@@ -5,6 +5,7 @@ This project demonstrates a complete CI/CD pipeline using GitHub Actions, Docker
 
 ## 🚀 Project Overview
 
+
 - **Repository**: [github.com/mrckurz/cicd-workshop](https://github.com/mrckurz/cicd-workshop)
 - **Technologies**: GitHub Actions, Docker, Trivy, SonarCloud, Minikube
 - **Pipeline Stages**:
