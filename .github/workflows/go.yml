@@ -68,6 +68,7 @@ jobs:
           scan-type: 'config'
           severity: 'CRITICAL,HIGH'
 
+          
 
   Docker_Build_and_Publish:
     runs-on: ubuntu-latest
