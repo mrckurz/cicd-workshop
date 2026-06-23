@@ -15,8 +15,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 
 	t := time.Now()
-	today := t.Format("2006-01-02") // YYYY-MM-DD format
-	timeString := fmt.Sprintf("%02d:%02d", t.Hour(), getMinute(t.Minute(), t.Second()))
+	today := t.Format("2006-01-02")                                                     // YYYY-MM-DD format
+	timeString := fmt.Sprintf("%02d:%02d", t.Hour(), getMinute(t.Minute(), t.Second())) //hallo
 
 	fmt.Fprintf(w, "Hello, it is %s<br />", timeString)
 	fmt.Fprintf(w, "Today is: <b>%s</b>", today)
